@@ -1,0 +1,35 @@
+{
+  "name": "Game",
+  "version": "0.0.1-pre",
+  "description": "A game",
+  "main": "coffee_bridge.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ethanmick/mustached-octo-dubstep.git"
+  },
+  "author": "Ethan Mick",
+  "license": "MIT",
+  "config": {
+    "blanket": {
+      "pattern": "//server.coffee|/lib/",
+      "shortnames": true,
+      "data-cover-reporter-options": {
+        "shortnames": true
+      },
+      "data-cover-never": "node_modules",
+      "loader": "./node-loaders/coffee-script"
+    }
+  },
+  "dependencies": {
+    "coffee-script": "1.9.1",
+    "hapi": "8.2.0",
+    "q": "1.2.0"
+  },
+  "devDependencies": {
+    "blanket": "1.1.6",
+    "chai": "1.9.1",
+    "mocha": "2.0.1",
+    "sinon": "1.10.3",
+    "supertest": "0.10.0"
+  }
+}
