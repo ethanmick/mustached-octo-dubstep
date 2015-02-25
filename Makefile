@@ -5,6 +5,9 @@ unit:
 	./node_modules/mocha/bin/_mocha --compilers coffee:coffee-script/register ./test/unit
 
 
+models:
+	./node_modules/mocha/bin/_mocha --compilers coffee:coffee-script/register ./test/integration
+
 integration:
 	-rm nohup.out
 	$(MAKE) kill-node

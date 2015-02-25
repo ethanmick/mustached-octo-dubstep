@@ -21,14 +21,22 @@
     }
   },
   "dependencies": {
+    "agenda": "0.6.28",
+    "bcrypt": "0.8.1",
+    "bell": "2.1.0",
+    "boom": "2.6.1",
     "coffee-script": "1.9.1",
     "hapi": "8.2.0",
-    "q": "1.2.0"
+    "hapi-auth-bearer-token": "3.1.0",
+    "mongoose-q": "0.0.15",
+    "q": "1.2.0",
+    "uuid": "2.0.1"
   },
   "devDependencies": {
     "blanket": "1.1.6",
     "chai": "1.9.1",
     "mocha": "2.0.1",
+    "mongodb": "1.4.31",
     "sinon": "1.10.3",
     "supertest": "0.10.0"
   }
