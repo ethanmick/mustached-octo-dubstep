@@ -21,11 +21,11 @@
     }
   },
   "dependencies": {
-    "agenda": "0.6.28",
     "bcrypt": "0.8.1",
     "bell": "2.1.0",
     "boom": "2.6.1",
     "coffee-script": "1.9.1",
+    "future-client": "ethanmick/future-client",
     "hapi": "8.2.0",
     "hapi-auth-bearer-token": "3.1.0",
     "mongoose-q": "0.0.15",
