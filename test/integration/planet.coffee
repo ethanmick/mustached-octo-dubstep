@@ -23,7 +23,5 @@ describe 'Planet', ->
       done()
     .done()
 
-
-
   after (done)->
     db.close -> done()
