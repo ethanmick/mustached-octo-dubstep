@@ -9,7 +9,6 @@ describe 'Building', ->
   before (done)->
     mongoose.connect('mongodb://localhost:27017/stupid_game');
     db = mongoose.connection
-
     b = new Building(name: 'Mine', level: 1, planet: null)
     b.saveQ().then ->
       done()
@@ -17,7 +16,7 @@ describe 'Building', ->
 
   it 'should upgrade', (done)->
     @timeout(7000)
-    b.upgrade()
+    b.upgrade().done()
     setTimeout ->
       Building.findByIdQ(b._id).then (aB)->
         aB.level.should.equal 2

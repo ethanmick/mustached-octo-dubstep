@@ -3,8 +3,7 @@ Q = require 'q'
 uuid = require 'uuid'
 Schema = mongoose.Schema
 ObjectId = Schema.Types.ObjectId
-future = require './future'
-
+Task = require('./future').Task
 
 #
 # Is a planet that is controlled by a player
@@ -25,16 +24,7 @@ BuildingSchema.methods =
     @saveQ()
 
   upgrade: ->
-    d = new Date()
-    d.setSeconds(d.getSeconds() + 5)
-    task =
-      name: uuid.v4()
-      time: d
-      opts:
-        action: 'upgrade'
-        id: @_id
-    console.log 'SENDING', task
-    future.schedule(task)
+    Task.inSeconds(5, opts: {action: 'upgrade', id: @_id}, yes)
 
 BuildingSchema.statics =
 
